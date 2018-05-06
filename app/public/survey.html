@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Friend Finder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="/routes/apiRoutes.js"></script>
+    <script src="/routes/htmlRoutes.js"></script>
+    <script src="../server.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <h1>Survey Questions</h1>
+        </div>
+        <hr>
+        <form>
+            <div class="row">
+                <h3>About You</h3>
+                <div class="input-field">
+                    <input type="text" id="name" class="validate">
+                    <label for="name">Name (Required)</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="photo" class="validate">
+                    <label for="photo">Link to Photo (Required)</label>
+                </div>
+            </div>
+            <div class="row">
+                <h4>Question 1</h4>
+                <div class="row">
+                    <label class="surveyQ">Your mind is always buzzing with unexplored ideas and plans.</label>
+                    <select class="browser-default">
+                        <option value="" disable selected>Select an Option</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <h4>Question 2</h4>
+                <div class="row">
+                    <label class="surveyQ">Generally speaking, you rely more on your experience than your imagination.</label>
+                    <select class="browser-default">
+                        <option value="" disable selected>Select an Option</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <h4>Question 3</h4>
+                <div class="row">
+                    <label class="surveyQ">You find it easy to stay relazed and focused even when there is some pressure.</label>
+                    <select class="browser-default">
+                        <option value="" disable selected>Select an Option</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <h4>Question 4</h4>
+                <div class="row">
+                    <label class="surveyQ">You rarely do something just out of sheer curiosity.</label>
+                    <select class="browser-default">
+                        <option value="" disable selected>Select an Option</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <h4>Question 5</h4>
+                <div class="row">
+                    <label class="surveyQ">People can rarely upset you.</label>
+                    <select class="browser-default">
+                        <option value="" disable selected>Select an Option</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <h4>Question 6</h4>
+                <div class="row">
+                    <label class="surveyQ">It is often difficult for you to relate to other people's feelings.</label>
+                    <select class="browser-default">
+                        <option value="" disable selected>Select an Option</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <h4>Question 7</h4>
+                <div class="row">
+                    <label class="surveyQ">In a discussion, truth should be more important than people's sensitivities.</label>
+                    <select class="browser-default">
+                        <option value="" disable selected>Select an Option</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <h4>Question 8</h4>
+                <div class="row">
+                    <label class="surveyQ">You rarely get carried away by fantasies and ideas.</label>
+                    <select class="browser-default">
+                        <option value="" disable selected>Select an Option</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <h4>Question 9</h4>
+                <div class="row">
+                    <label class="surveyQ">You think that everyone's views should be respected regardless of whether they are supported by facts
+                        or not.
+                    </label>
+                    <select class="browser-default">
+                        <option value="" disable selected>Select an Option</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <h4>Question 10</h4>
+                <div class="row">
+                    <label class="surveyQ">You feel more energetic after spending time with a group of people.</label>
+                    <select class="browser-default">
+                        <option value="" disable selected>Select an Option</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
+
+<script>
+    $(document).ready(function () {
+        $('select').formSelect();
+    });
+</script>
