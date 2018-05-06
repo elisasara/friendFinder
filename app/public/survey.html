@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Friend Finder</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -38,7 +37,7 @@
                 <h4>Question 1</h4>
                 <div class="row">
                     <label class="surveyQ">Your mind is always buzzing with unexplored ideas and plans.</label>
-                    <select class="browser-default">
+                    <select class="browser-default" id="q1">
                         <option value="" disable selected>Select an Option</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -52,7 +51,7 @@
                 <h4>Question 2</h4>
                 <div class="row">
                     <label class="surveyQ">Generally speaking, you rely more on your experience than your imagination.</label>
-                    <select class="browser-default">
+                    <select class="browser-default" id="q2">
                         <option value="" disable selected>Select an Option</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -66,7 +65,7 @@
                 <h4>Question 3</h4>
                 <div class="row">
                     <label class="surveyQ">You find it easy to stay relazed and focused even when there is some pressure.</label>
-                    <select class="browser-default">
+                    <select class="browser-default" id="q3">
                         <option value="" disable selected>Select an Option</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -80,7 +79,7 @@
                 <h4>Question 4</h4>
                 <div class="row">
                     <label class="surveyQ">You rarely do something just out of sheer curiosity.</label>
-                    <select class="browser-default">
+                    <select class="browser-default" id="q4">
                         <option value="" disable selected>Select an Option</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -94,7 +93,7 @@
                 <h4>Question 5</h4>
                 <div class="row">
                     <label class="surveyQ">People can rarely upset you.</label>
-                    <select class="browser-default">
+                    <select class="browser-default" id="q5">
                         <option value="" disable selected>Select an Option</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -108,7 +107,7 @@
                 <h4>Question 6</h4>
                 <div class="row">
                     <label class="surveyQ">It is often difficult for you to relate to other people's feelings.</label>
-                    <select class="browser-default">
+                    <select class="browser-default" id="q6">
                         <option value="" disable selected>Select an Option</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -122,7 +121,7 @@
                 <h4>Question 7</h4>
                 <div class="row">
                     <label class="surveyQ">In a discussion, truth should be more important than people's sensitivities.</label>
-                    <select class="browser-default">
+                    <select class="browser-default" id="q7">
                         <option value="" disable selected>Select an Option</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -136,7 +135,7 @@
                 <h4>Question 8</h4>
                 <div class="row">
                     <label class="surveyQ">You rarely get carried away by fantasies and ideas.</label>
-                    <select class="browser-default">
+                    <select class="browser-default" id="q8">
                         <option value="" disable selected>Select an Option</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -152,7 +151,7 @@
                     <label class="surveyQ">You think that everyone's views should be respected regardless of whether they are supported by facts
                         or not.
                     </label>
-                    <select class="browser-default">
+                    <select class="browser-default" id="q9">
                         <option value="" disable selected>Select an Option</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -166,7 +165,7 @@
                 <h4>Question 10</h4>
                 <div class="row">
                     <label class="surveyQ">You feel more energetic after spending time with a group of people.</label>
-                    <select class="browser-default">
+                    <select class="browser-default" id="q10">
                         <option value="" disable selected>Select an Option</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -176,7 +175,7 @@
                     </select>
                 </div>
             </div>
-            <button type="submit">Submit</button>
+            <button type="submit" id="submit">Submit</button>
         </form>
     </div>
 </body>
@@ -184,7 +183,34 @@
 </html>
 
 <script>
-    $(document).ready(function () {
-        $('select').formSelect();
-    });
+    // $(document).ready(function () {
+    //     $('select').formSelect();
+    // });
+
+$("#submit").on("click", function(){
+    event.preventDefault();
+
+    var newFriend = {
+        name: $("#name").val().trim(),
+        photo: $("#photo").val().trim(),
+        scores: [
+            $("#q1").val(),
+            $("#q2").val(),
+            $("#q3").val(),
+            $("#q4").val(),
+            $("#q5").val(),
+            $("#q6").val(),
+            $("#q7").val(),
+            $("#q8").val(),
+            $("#q9").val(),
+            $("#q10").val()
+        ]
+    };
+
+    console.log(newFriend);
+
+    $.post("/api/friends", newFriend).then(function(data){
+        //modal pop up
+    })
+})    
 </script>

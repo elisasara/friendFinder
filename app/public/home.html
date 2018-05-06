@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Friend Finder</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
     <script src="/routes/apiRoutes.js"></script>
     <script src="/routes/htmlRoutes.js"></script>
     <script src="../server.js"></script>
@@ -17,7 +19,7 @@
         <hr>
         <h3>Answer a few basic questions.</h3>
         <h3>Then find the friend with the greatest compatibility!</h3>
-        <button id="goToSurvey">Go To Survey</button>
+        <a href="/survey"><button id="goToSurvey">Go To Survey</button></a>
     </div>
     <div class="container">
         <p><a href=#>API Friend List</a> | <a href=#>GitHub Repo</a></p>
