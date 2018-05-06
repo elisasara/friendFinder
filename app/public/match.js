@@ -2,16 +2,21 @@ var friends = require("../data/friends");
 
 // compare the array of scores to other friends
 
-function matchFriends(newFriend) {
+function matchFriends() {
+    // the current user will always be the last object added to the friends array
+    var currentUser = friends[friends.length - 1]
     var bestMatch = "";
     var smallestDiff = 40;
-    for (var i = 0; i < friends.length; i++) {
-        if (newFriend.name != friends[i].name) {
+
+    // for loop for length of friends minus one so that it does not include the current user
+    for (var i = 0; i < friends.length -1; i++) {
+            // set a base value for the total difference
             var totalDiff = 0;
+
             // create a second for loop that goes through the values of the scores
-            for (var j = 0; j < friends.scores.length; j++) {
+            for (var j = 0; j < friends[i].scores.length; j++) {
                 // find the absolute value of the difference for the user's scores and the friends
-                var diff = Math.abs(newFriend.scores[j] - friends[i].scores[j]);
+                var diff = Math.abs(currentUser.scores[j] - friends[i].scores[j]);
                 totalDiff += diff;
 
                 console.log("total difference: " + totalDiff);
@@ -19,13 +24,15 @@ function matchFriends(newFriend) {
             // create an if statement to assess if that friend has the lowest value, store into appropriate variable
             if (totalDiff < smallestDiff) {
                 smallestDiff = totalDiff;
-                bestMatch = friends[i].name;
+                bestMatch = friends[i];
             };
-        };
+
     };
 
     console.log("Best Match: " + bestMatch);
     console.log("Smallest difference: " + smallestDiff);
+
+    return bestMatch;
 
 }
 

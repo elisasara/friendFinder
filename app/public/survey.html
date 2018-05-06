@@ -184,61 +184,32 @@
 </html>
 
 <script>
-    // $(document).ready(function () {
-    //     $('select').formSelect();
-    // });
 
-$("#submit").on("click", function(){
-    event.preventDefault();
+    $("#submit").on("click", function () {
+        event.preventDefault();
 
-    var newFriend = {
-        name: $("#name").val().trim(),
-        photo: $("#photo").val().trim(),
-        scores: [
-            $("#q1").val(),
-            $("#q2").val(),
-            $("#q3").val(),
-            $("#q4").val(),
-            $("#q5").val(),
-            $("#q6").val(),
-            $("#q7").val(),
-            $("#q8").val(),
-            $("#q9").val(),
-            $("#q10").val()
-        ]
-    };
-
-    console.log(newFriend);
-
-    $.post("/api/friends", newFriend).then(function(data){
-        matchFriends(newFriend);
-    })
-});
-
-function matchFriends(newFriend) {
-    var bestMatch = "";
-    var smallestDiff = 40;
-    for (var i = 0; i < friends.length; i++) {
-        var totalDiff = 0;
-        // create a second for loop that goes through the values of the scores
-        for (var j = 0; j < friends.scores.length; j++) {
-            // find the absolute value of the difference for the user's scores and the friends
-            var diff = Math.abs(newFriend.scores[j] - friends[i].scores[j]);
-            totalDiff += diff;
-
-            console.log("total difference: " + totalDiff);
+        var newFriend = {
+            name: $("#name").val().trim(),
+            photo: $("#photo").val().trim(),
+            scores: [
+                $("#q1").val(),
+                $("#q2").val(),
+                $("#q3").val(),
+                $("#q4").val(),
+                $("#q5").val(),
+                $("#q6").val(),
+                $("#q7").val(),
+                $("#q8").val(),
+                $("#q9").val(),
+                $("#q10").val()
+            ]
         };
-        // create an if statement to assess if that friend has the lowest value, store into appropriate variable
-        if (totalDiff < smallestDiff) {
-            smallestDiff = totalDiff;
-            bestMatch = friends[i].name;
-        };
-    };
 
-    console.log("Best Match: " + bestMatch);
-    console.log("Smallest difference: " + smallestDiff);
+        console.log(newFriend);
 
-    // after going through all friends export the result to be used for the modal
-}
+        $.post("/api/friends", newFriend).then(function (data) {
+            console.log(data);
+        })
+    });
 
- </script>
+</script>
