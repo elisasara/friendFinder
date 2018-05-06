@@ -7,13 +7,13 @@
     <title>Friend Finder</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+        crossorigin="anonymous"></script>
     <script src="/routes/apiRoutes.js"></script>
     <script src="/routes/htmlRoutes.js"></script>
     <script src="../server.js"></script>
-    <script src="/match.js"></script>
+    <script src="match.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 </head>
 
 <body>
@@ -184,7 +184,9 @@
 
     <div id="matchModal" class="modal">
         <div class="modal-content">
-            Test Modal!!
+            <h3>Your Match:
+                <span id="matchName"></span>
+            </h3>
         </div>
     </div>
 </body>
@@ -221,7 +223,7 @@
         });
     });
 
-    $(document).ready(function(){
+    $(document).ready(function () {
         $(".modal").modal();
     });
 
