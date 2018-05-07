@@ -1,6 +1,6 @@
 
 var friends = require("../data/friends.js");
-var matchFriends = require("../public/match.js")
+var matchFriends = require("../data/match.js")
 
 module.exports = function(app) {
     app.get("/api/friends", function (req, res){
@@ -12,6 +12,6 @@ module.exports = function(app) {
         friends.push(newFriend);
         res.json(friends);
 
-        matchFriends(friends);
+        matchFriends.matchFriends(friends);
     });
 };
