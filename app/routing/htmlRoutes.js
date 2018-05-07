@@ -10,8 +10,11 @@ module.exports = function(app) {
         res.sendFile(path.join(__dirname, "../public/survey.html"));
     });
 
-    // app.get("/match.js", function(req, res){
-    //     res.sendFile(path.join(__dirname, "../public/match.js"));
-    // });
+    // to avoid needing to serve individual styles, look into serving from a public directory
+    // https://expressjs.com/en/starter/static-files.html
+    // there were some examples in class activities last week IIRC
+    app.get("/style.css", function(req, res){
+        res.sendFile(path.join(__dirname, "../public/style.css"));
+    });
 
 };
