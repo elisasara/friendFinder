@@ -202,10 +202,10 @@
             </center>
             <br />
             <div class="right">
-            <button class="waves-effect waves-light btn-small" id="closeModal">Close
-                <i class="material-icons">pets</i>
-            </button>
-        </div>
+                <button class="waves-effect waves-light btn-small" id="closeModal">Close
+                    <i class="material-icons">pets</i>
+                </button>
+            </div>
         </div>
     </div>
 </body>
@@ -216,13 +216,29 @@
 
     $("#submit").on("click", function () {
         event.preventDefault();
-
-        if ($("#name").val() === "" || $("#photo").val() === "" || $("select").val() === "") {
+        var isValid = true;
+        if ($("#name").val() === "" || $("#photo").val() === "") {
+            isValid = false;
             alert("Please fill out all questions before submitting!")
-            return invalid;
+            return isValid;
         }
 
-        if (!invalid) {
+        if ($("#q1").val() === "" ||
+            $("#q2").val() === "" ||
+            $("#q3").val() === "" ||
+            $("#q4").val() === "" ||
+            $("#q5").val() === "" ||
+            $("#q6").val() === "" ||
+            $("#q7").val() === "" ||
+            $("#q8").val() === "" ||
+            $("#q9").val() === "" ||
+            $("#q10").val() === "") {
+            isValid = false;
+            alert("Please fill out all questions before submitting!")
+            return isValid;
+        }
+
+        if (isValid === true) {
             var newFriend = {
                 name: $("#name").val().trim(),
                 photo: $("#photo").val().trim(),
