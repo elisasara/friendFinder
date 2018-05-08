@@ -214,8 +214,11 @@
 
 <script>
 
+// on click of the submit button handle the information in the form
     $("#submit").on("click", function () {
         event.preventDefault();
+
+        // confirm that all fields have been filled out
         var isValid = true;
         if ($("#name").val() === "" || $("#photo").val() === "") {
             isValid = false;
@@ -238,6 +241,7 @@
             return isValid;
         }
 
+        // if all fields have been filled out then create a new friend and post to the api
         if (isValid === true) {
             var newFriend = {
                 name: $("#name").val().trim(),
@@ -261,6 +265,7 @@
             $.post("/api/friends", newFriend).then(function (data) {
                 console.log(data);
 
+                // with the data returned from the post request place that into the modal
                 $("#matchName").text(data.name);
                 $("#photoArea").html("<img id='matchPhoto' src=" + data.photo + ">");
 
@@ -273,6 +278,7 @@
         $(".modal").modal();
     });
 
+    // when the close button is clicked on the modal, close the modal and reset all of the fields on the form.
     $("#closeModal").on("click", function (event) {
         $("#matchModal").modal("close");
         $("#name").val("");

@@ -9,11 +9,11 @@ module.exports = function(app) {
 
     app.post("/api/friends", function(req, res){
         friends.push(req.body);
-        // res.json(friends);
 
+        // store the returned value from the matchFriends function in a variable
         var bestMatch = matchFriends(friends);
+        // pass that variable as the information being returned after the promise is fulfilled in the AJAX post request
         res.json(bestMatch);
 
-        // matchFriends.matchFriends(friends);
     });
 };
