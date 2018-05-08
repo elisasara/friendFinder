@@ -39,7 +39,4 @@ function matchFriends() {
 
 }
 
-// best match gets displayed on a modal
-// after going through all friends export the result to be used for the modal
-
 module.exports = matchFriends;
