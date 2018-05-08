@@ -216,18 +216,22 @@
 
         $.post("/api/friends", newFriend).then(function (data) {
             console.log(data);
+
+            $("#matchName").text(data.name);
+            $(".modalContent").append("<img src=" + data.photo + ">");
+
             $("#matchModal").modal("open");
         });
     });
 
     function matchFriends() {
-    // the current user will always be the last object added to the friends array
-    var currentUser = friends[friends.length - 1]
-    var bestMatch = "";
-    var smallestDiff = 40;
+        // the current user will always be the last object added to the friends array
+        var currentUser = friends[friends.length - 1]
+        var bestMatch = "";
+        var smallestDiff = 40;
 
-    // for loop for length of friends minus one so that it does not include the current user
-    for (var i = 0; i < friends.length -1; i++) {
+        // for loop for length of friends minus one so that it does not include the current user
+        for (var i = 0; i < friends.length - 1; i++) {
             // set a base value for the total difference
             var totalDiff = 0;
 
@@ -245,17 +249,17 @@
                 bestMatch = friends[i];
             };
 
-    };
+        };
 
-    console.log("Best Match: " + bestMatch);
-    console.log("Smallest difference: " + smallestDiff);
+        console.log("Best Match: " + bestMatch);
+        console.log("Smallest difference: " + smallestDiff);
 
-    $("#matchName").text(bestMatch.name);
-    $(".modalContent").append("<img src=" + bestMatch.photo + ">");
+        $("#matchName").text(bestMatch.name);
+        $(".modalContent").append("<img src=" + bestMatch.photo + ">");
 
-    return bestMatch;
+        return bestMatch;
 
-}
+    }
 
     $(document).ready(function () {
         $(".modal").modal();

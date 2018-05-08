@@ -32,8 +32,8 @@ function matchFriends() {
     console.log("Best Match: " + bestMatch);
     console.log("Smallest difference: " + smallestDiff);
 
-    $("#matchName").text(bestMatch.name);
-    $(".modalContent").append("<img src=" + bestMatch.photo + ">");
+    // $("#matchName").text(bestMatch.name);
+    // $(".modalContent").append("<img src=" + bestMatch.photo + ">");
 
     return bestMatch;
 
