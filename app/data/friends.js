@@ -2,7 +2,7 @@
 var friends = [
     {
         name: "Doggo",
-        photo: "https://i.imgur.com/mUIQRVy.jpg",
+        photo: "./public/images/doggo.jpg",
         scores: [
             1,
             1,
@@ -18,14 +18,14 @@ var friends = [
     },
     {
         name: "Pupper",
-        photo: "https://pbs.twimg.com/profile_images/814263074639187968/Ioh1Qvuc_400x400.jpg",
+        photo: ".public/images/pupper.jpg",
         scores: [
             3,
             3,
             3,
             3,
             3,
-            3,
+            4,
             3,
             3,
             3,
@@ -34,7 +34,7 @@ var friends = [
     },
     {
         name: "Floof",
-        photo: "https://78.media.tumblr.com/c464839faa9083cccb014cc500182c0f/tumblr_inline_ortrs0RThN1qzf6t4_540.png",
+        photo: ".public/images/floof.png",
         scores: [
             5,
             5,

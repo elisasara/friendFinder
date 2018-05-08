@@ -20,9 +20,21 @@ module.exports = function(app) {
     app.get("/images/goldenRetriever.jpg", function(req, res){
         res.sendFile(path.join(__dirname, "../public/images/goldenRetriever.jpg"));
     });
-    
-    app.get("*", function(req, res) {
-        res.sendFile(path.join(__dirname, "../public/home.html"));
-      });
+
+    app.get("/public/images/doggo.jpg", function(req, res){
+        res.sendFile(path.join(__dirname, "../public/images/doggo.jpg"));
+    });
+
+    app.get("/public/images/pupper.jpg", function(req, res){
+        res.sendFile(path.join(__dirname, "../public/images/pupper.jpg"));
+    });
+
+    app.get("/public/images/floor.png", function(req, res){
+        res.sendFile(path.join(__dirname, "../public/images/floof.png"));
+    });
+
+    // app.get("*", function(req, res) {
+    //     res.sendFile(path.join(__dirname, "../public/home.html"));
+    //   });
 
 };
