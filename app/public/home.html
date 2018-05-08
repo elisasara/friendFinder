@@ -6,19 +6,28 @@
     <title>Puppy Friend Finder</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="mainHome">
+        <div class="row">
+            <div class="col m6">
         <h1>Puppy Friend Finder</h1>
         <hr>
-        <h3>Answer a few basic questions about your pup.</h3>
-        <h3>Then find them a puppy friend with the greatest compatibility!</h3>
-        <a href="/survey"><button id="goToSurvey">Go To Survey</button></a>
+        <p>Answer a few basic questions about your pup.</p>
+        <p>Then find them a puppy friend with the greatest compatibility!</p>
+        <center><a href="/survey"><button class="waves-effect btn-large" id="goToSurvey">Go To Survey  <i class="material-icons">pets</i></button></a></center>
+    </div>
+    <div class="col m6">
+        <center><img id="mainPhoto" class="circle" src="./images/goldenRetriever.jpg"></center>
+    </div>
+    </div>
     </div>
     <div class="container">
-        <p><a href="/api/friends">API Friend List</a> | <a href="https://github.com/elisasara/friendFinder">GitHub Repo</a></p>
+        <p id="links"><a href="/api/friends">API Friend List</a> | <a href="https://github.com/elisasara/friendFinder">GitHub Repo</a></p>
     </div>   
 </body>
 </html>

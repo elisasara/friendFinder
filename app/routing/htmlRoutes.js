@@ -17,6 +17,10 @@ module.exports = function(app) {
         res.sendFile(path.join(__dirname, "../public/style.css"));
     });
 
+    app.get("/images/goldenRetriever.jpg", function(req, res){
+        res.sendFile(path.join(__dirname, "../public/images/goldenRetriever.jpg"));
+    });
+    
     app.get("*", function(req, res) {
         res.sendFile(path.join(__dirname, "../public/home.html"));
       });

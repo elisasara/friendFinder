@@ -14,3 +14,29 @@
     font-size: 16px;
     color: #5b018c;
 }
+
+.container {
+    width: 85%;
+}
+
+p {
+    font-size: 18px;
+}
+#mainHome {
+    margin-top: 10px;
+    background-color:#5b018c;
+    color: #c587e7;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 15px;
+}
+
+#mainPhoto {
+    margin-top: 10%;
+    height: 300px;
+    width: auto;
+}
+
+#links {
+    font-size: 12px;
+}
