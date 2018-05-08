@@ -1,0 +1,16 @@
+#matchModal {
+    height: 350px;
+}
+
+#matchPhoto {
+    display: block;
+    height: 200px;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.surveyQ {
+    font-size: 16px;
+    color: #5b018c;
+}
