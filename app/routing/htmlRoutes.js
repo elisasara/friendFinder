@@ -21,6 +21,11 @@ module.exports = function(app) {
         res.sendFile(path.join(__dirname, "../public/images/goldenRetriever.jpg"));
     });
 
+    app.get("/survey/images/goldenRetriever.jpg", function(req, res){
+        res.sendFile(path.join(__dirname, "../public/images/goldenRetriever.jpg"));
+    });
+
+
     app.get("/public/images/doggo.jpg", function(req, res){
         res.sendFile(path.join(__dirname, "../public/images/doggo.jpg"));
     });
@@ -29,7 +34,7 @@ module.exports = function(app) {
         res.sendFile(path.join(__dirname, "../public/images/pupper.jpg"));
     });
 
-    app.get("/public/images/floor.png", function(req, res){
+    app.get("/public/images/floof.png", function(req, res){
         res.sendFile(path.join(__dirname, "../public/images/floof.png"));
     });
 

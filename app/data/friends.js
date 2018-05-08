@@ -18,7 +18,7 @@ var friends = [
     },
     {
         name: "Pupper",
-        photo: ".public/images/pupper.jpg",
+        photo: "./public/images/pupper.jpg",
         scores: [
             3,
             3,
@@ -34,7 +34,7 @@ var friends = [
     },
     {
         name: "Floof",
-        photo: ".public/images/floof.png",
+        photo: "./public/images/floof.png",
         scores: [
             5,
             5,

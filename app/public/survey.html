@@ -7,6 +7,7 @@
     <title>Friend Finder</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
@@ -15,8 +16,15 @@
 
 <body>
     <div class="container">
-        <div class="row">
-            <h1>Survey Questions</h1>
+        <div class="row" id="headerRow">
+            <div class="col m7 valign-wrapper" id="surveyHeader">
+                <h2>Survey Questions</h2>
+            </div>
+            <div class="col m5">
+                <center>
+                    <img class="circle" id="surveyPhoto" src="./images/goldenRetriever.jpg">
+                </center>
+            </div>
         </div>
         <hr>
         <form>
@@ -31,147 +39,154 @@
                     <label for="photo">Link to Photo (Required)</label>
                 </div>
             </div>
-            <div class="row">
-                <h4>Question 1</h4>
+            <div class="container" id="questionArea">
                 <div class="row">
-                    <label class="surveyQ">When your dog sees another dog, he/she has to go over and say hi.</label>
-                    <select class="browser-default options" id="q1">
-                        <option value="" disable selected>Select an Option</option>
-                        <option value="1">1 (strongly disagree)</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5 (strongly agree)</option>
-                    </select>
+                    <h4>Question 1</h4>
+                    <div class="row">
+                        <label class="surveyQ">When your dog sees another dog, he/she has to go over and say hi.</label>
+                        <select class="browser-default options" id="q1">
+                            <option value="" disable selected>Select an Option</option>
+                            <option value="1">1 (strongly disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (strongly agree)</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <h4>Question 2</h4>
                 <div class="row">
-                    <label class="surveyQ">Your dog gets excited when he/she meets new people.</label>
-                    <select class="browser-default options" id="q2">
-                        <option value="" disable selected>Select an Option</option>
-                        <option value="1">1 (strongly disagree)</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5 (strongly agree)</option>
-                    </select>
+                    <h4>Question 2</h4>
+                    <div class="row">
+                        <label class="surveyQ">Your dog gets excited when he/she meets new people.</label>
+                        <select class="browser-default options" id="q2">
+                            <option value="" disable selected>Select an Option</option>
+                            <option value="1">1 (strongly disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (strongly agree)</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <h4>Question 3</h4>
                 <div class="row">
-                    <label class="surveyQ">Your dog likes toys that squeak better than those that do not.</label>
-                    <select class="browser-default options" id="q3">
-                        <option value="" disable selected>Select an Option</option>
-                        <option value="1">1 (strongly disagree)</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5 (strongly agree)</option>
-                    </select>
+                    <h4>Question 3</h4>
+                    <div class="row">
+                        <label class="surveyQ">Your dog likes toys that squeak better than those that do not.</label>
+                        <select class="browser-default options" id="q3">
+                            <option value="" disable selected>Select an Option</option>
+                            <option value="1">1 (strongly disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (strongly agree)</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <h4>Question 4</h4>
                 <div class="row">
-                    <label class="surveyQ">Your dog answers to any form of endearing name including those that do not sound like his/her real name at all.</label>
-                    <select class="browser-default options" id="q4">
-                        <option value="" disable selected>Select an Option</option>
-                        <option value="1">1 (strongly disagree)</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5 (strongly agree)</option>
-                    </select>
+                    <h4>Question 4</h4>
+                    <div class="row">
+                        <label class="surveyQ">Your dog answers to any form of endearing name including those that do not sound like his/her real
+                            name at all.</label>
+                        <select class="browser-default options" id="q4">
+                            <option value="" disable selected>Select an Option</option>
+                            <option value="1">1 (strongly disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (strongly agree)</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <h4>Question 5</h4>
                 <div class="row">
-                    <label class="surveyQ">When your dog sleeps, he/she takes up most of the bed.</label>
-                    <select class="browser-default options" id="q5">
-                        <option value="" disable selected>Select an Option</option>
-                        <option value="1">1 (strongly disagree)</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5 (strongly agree)</option>
-                    </select>
+                    <h4>Question 5</h4>
+                    <div class="row">
+                        <label class="surveyQ">When your dog sleeps, he/she takes up most of the bed.</label>
+                        <select class="browser-default options" id="q5">
+                            <option value="" disable selected>Select an Option</option>
+                            <option value="1">1 (strongly disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (strongly agree)</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <h4>Question 6</h4>
                 <div class="row">
-                    <label class="surveyQ">Your dog is not good at sharing food.</label>
-                    <select class="browser-default options" id="q6">
-                        <option value="" disable selected>Select an Option</option>
-                        <option value="1">1 (strongly disagree)</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5 (strongly agree)</option>
-                    </select>
+                    <h4>Question 6</h4>
+                    <div class="row">
+                        <label class="surveyQ">Your dog is not good at sharing food.</label>
+                        <select class="browser-default options" id="q6">
+                            <option value="" disable selected>Select an Option</option>
+                            <option value="1">1 (strongly disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (strongly agree)</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <h4>Question 7</h4>
                 <div class="row">
-                    <label class="surveyQ">Your dog's favorite pastime is chasing his/her own tail.</label>
-                    <select class="browser-default options" id="q7">
-                        <option value="" disable selected>Select an Option</option>
-                        <option value="1">1 (strongly disagree)</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5 (strongly agree)</option>
-                    </select>
+                    <h4>Question 7</h4>
+                    <div class="row">
+                        <label class="surveyQ">Your dog's favorite pastime is chasing his/her own tail.</label>
+                        <select class="browser-default options" id="q7">
+                            <option value="" disable selected>Select an Option</option>
+                            <option value="1">1 (strongly disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (strongly agree)</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <h4>Question 8</h4>
                 <div class="row">
-                    <label class="surveyQ">Your dog is scared of cats.</label>
-                    <select class="browser-default options" id="q8">
-                        <option value="" disable selected>Select an Option</option>
-                        <option value="1">1 (strongly disagree)</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5 (strongly agree</option>
-                    </select>
+                    <h4>Question 8</h4>
+                    <div class="row">
+                        <label class="surveyQ">Your dog is scared of cats.</label>
+                        <select class="browser-default options" id="q8">
+                            <option value="" disable selected>Select an Option</option>
+                            <option value="1">1 (strongly disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (strongly agree</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <h4>Question 9</h4>
                 <div class="row">
-                    <label class="surveyQ">Your dog will do anything for a treat.</label>
-                    <select class="browser-default options" id="q9">
-                        <option value="" disable selected>Select an Option</option>
-                        <option value="1">1 (strongly disagree)</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5 (strongly agree)</option>
-                    </select>
+                    <h4>Question 9</h4>
+                    <div class="row">
+                        <label class="surveyQ">Your dog will do anything for a treat.</label>
+                        <select class="browser-default options" id="q9">
+                            <option value="" disable selected>Select an Option</option>
+                            <option value="1">1 (strongly disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (strongly agree)</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <h4>Question 10</h4>
                 <div class="row">
-                    <label class="surveyQ">Your dog is a good boy!</label>
-                    <select class="browser-default options" id="q10">
-                        <option value="" disable selected>Select an Option</option>
-                        <option value="1">1 (strongly disagree)</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5 (strongly agree)</option>
-                    </select>
+                    <h4>Question 10</h4>
+                    <div class="row">
+                        <label class="surveyQ">Your dog is a good boy!</label>
+                        <select class="browser-default options" id="q10">
+                            <option value="" disable selected>Select an Option</option>
+                            <option value="1">1 (strongly disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (strongly agree)</option>
+                        </select>
+                    </div>
                 </div>
+                <center>
+                    <button class="waves-effect btn-large modal-trigger" data-target="matchModal" type="submit" id="submit">Submit
+                        <i class="material-icons">pets</i>
+                    </button>
+                </center>
             </div>
-            <button class="btn modal-trigger" data-target="matchModal" type="submit" id="submit">Submit</button>
         </form>
     </div>
 
@@ -182,7 +197,15 @@
             <h3>Your Match:
                 <span id="matchName"></span>
             </h3>
-            <center><div id="photoArea"></div></center>
+            <center>
+                <div id="photoArea"></div>
+            </center>
+            <br />
+            <div class="right">
+            <button class="waves-effect waves-light btn-small" id="closeModal">Close
+                <i class="material-icons">pets</i>
+            </button>
+        </div>
         </div>
     </div>
 </body>
@@ -196,9 +219,10 @@
 
         if ($("#name").val() === "" || $("#photo").val() === "" || $("select").val() === "") {
             alert("Please fill out all questions before submitting!")
+            return invalid;
         }
 
-        else {
+        if (!invalid) {
             var newFriend = {
                 name: $("#name").val().trim(),
                 photo: $("#photo").val().trim(),
@@ -231,6 +255,22 @@
 
     $(document).ready(function () {
         $(".modal").modal();
+    });
+
+    $("#closeModal").on("click", function (event) {
+        $("#matchModal").modal("close");
+        $("#name").val("");
+        $("#photo").val("");
+        $("#q1").val("");
+        $("#q2").val("");
+        $("#q3").val("");
+        $("#q4").val("");
+        $("#q5").val("");
+        $("#q6").val("");
+        $("#q7").val("");
+        $("#q8").val("");
+        $("#q9").val("");
+        $("#q10").val("");
     });
 
 

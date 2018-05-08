@@ -1,5 +1,6 @@
 #matchModal {
     height: 350px;
+    background-color: #c587e7;
 }
 
 #matchPhoto {
@@ -39,4 +40,53 @@ p {
 
 #links {
     font-size: 12px;
+}
+
+select {
+    width: 25%;
+}
+
+#questionArea {
+    width: 75%;
+    background-color: #2fa599;
+    border-radius: 25px;
+    padding-left: 15px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+#submit {
+    background-color: #5b018c;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    border-color: white;
+}
+
+#submit:hover {
+    background-color: #c587e7;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    border-color: #5b018c;
+}
+
+h4 {
+    font-size: 24px;
+}
+
+#surveyPhoto {
+    height: 100px;
+    width: auto;
+    margin-top: 5px;
+}
+
+#headerRow {
+    background-color: #5b018c;
+    color: #c587e7;
+}
+
+#surveyHeader {
+    padding-left: 10%;
 }
